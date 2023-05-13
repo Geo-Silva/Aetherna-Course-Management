@@ -26,10 +26,10 @@ Basing my concepts on the best practices of the front end developing, I'm using 
 
 To develop the back-end, I used Spring Boot (a Java framework) and Apache Maven to compile the application.
 
-The packages were structured following the MVC (Model, View and Controller) Standard. I created and deployed a REST (REpresentational State Transfer) API using SpringBoot and MySQL, applying JPA (Java Persistence API) and Hibernate (an object/relational mapping tool for Java environments).
+The packages were structured following the MVC (Model, View and Controller) Standard. I created and deployed a REST (Representational State Transfer) API using SpringBoot and MySQL, applying JPA (Java Persistence API) and Hibernate (an object/relational mapping tool for Java environments).
 
 I applied data validation and exception handling and properly use the HTTP protocol. 
-Our client application represents our front end, that is directly connected with the back end, which recieves request from the front end in the REST controller layer ( the resource layer). 
+The client application represents the front end, that is directly connected with the back end, which recieves request from the front end in the REST controller layer ( the resource layer). 
 
 The REST layer -  where I implemented the logic - and the service layer, has the power to access the data layer and the repositories. The services and repositories are the ones that communicate with the application's domain class 
 
@@ -55,7 +55,7 @@ I also implemented a test class using Mockito. There I fully tested all outcomes
     
     `npm install -g @angular/cli@latest`
     
-    - The prjects need some dependencies to work properl. To install the dependencies used in the project, with the project's page open in the terminal, run:
+    - The project need some dependencies to work properly. To install the dependencies used in the project, with the project's page open in the terminal, run:
     
     `npm install`
     
@@ -65,7 +65,7 @@ I also implemented a test class using Mockito. There I fully tested all outcomes
 
 ## **Spring**
 
-1. To run the project properly, some development tools must be installed. Java JDK, Spring tools Suite and Maven must be installed and the environment variable defined.
+1. To run the project properly, some development tools must be installed. Java JDK, Spring Tools Suite (or Eclipse) and Maven must be installed and the environment variable defined.
 2. To install Java JDK
     - Download JDK [here](https://www.oracle.com/java/technologies/downloads/#jdk19-windows)
     - Install the JDK exe File
