@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "0ccbeaed-5c13-4144-9704-2ac82de4ec5c",
+		"name": "Cursos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23249988"
+	},
+	"item": [
+		{
+			"name": "CreateNewCourse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"nome\" : \"Desenvolvimento Java\",\r\n    \"descricao\" : \"Do zero ao mestre em Java\",\r\n    \"modelo\" : \"modelo1\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/cursos/criar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"criar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WillNotCreateDueToLargeName",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"nome\": \"Um nome muito grande que sinceramente ninguem mesmo vai ler\",\r\n    \"descricao\": \"Uma qualquer\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/cursos/criar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"criar"
+					]
+				},
+				"description": "# O nome do curso é muito extenso, excede o limite de 50 caracteres e lança uma exceção que é mostrada no console. Erro 500"
+			},
+			"response": []
+		},
+		{
+			"name": "ListAllCourses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCourse",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"nome\" : \"Desenvolvimento Python\",\r\n    \"descricao\" : \"Do zero ao mestre em Python\",\r\n    \"modelo\" : \"modelo2\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/cursos/atualizar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"atualizar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteByCourseId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/cursos/deletar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"deletar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindCourseById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos/buscar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"buscar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
