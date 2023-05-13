@@ -90,6 +90,7 @@ I also implemented a test class using Mockito. There I fully tested all outcomes
 6. A change to the application.properties file is required.
     - It is necessary to define your database address, username and password.
     - By default these are the data, just when installing the database enter the same data for username and password 
+7. Finally, start your backend application by going in the Project Explorer -> aetherna -> src/main/java -> br.com.minos.aetherna -> AethernaApplication. After you opened it, right click on the code screen -> Run As -> Java Application or go to your Toolbar and click on the green play button (first one from left to right)    
 
 ## Extra
 
