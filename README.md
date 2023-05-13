@@ -92,9 +92,15 @@ I also implemented a test class using Mockito. There I fully tested all outcomes
     - By default these are the data, just when installing the database enter the same data for username and password 
 7. Finally, start your backend application by going in the Project Explorer -> aetherna -> src/main/java -> br.com.minos.aetherna -> AethernaApplication. After you opened it, right click on the code screen -> Run As -> Java Application or go to your Toolbar and click on the green play button (first one from left to right)    
 
+## **DataBase Note**
+
+It's important that you create the "aetherna" schema in your database. If you don't, the Backend application won't run. To solve this simply create a schema called "aetherna" or go the DataBase folder in the project and run this file -> DDL - Create Schema and Course Table.sql - By doing this you create the necessary schema in your database, alongside the Course table. 
+    - If you are unable to run the DDL.sql file, open your database, then open the DDL.sql file. copy it's content and paste on a new SQL tab for running queries. 
+    - Remember to select all the content and then clicking on the lightning icon on your toolbar. This will run the current select SQL code
+
 ## Extra
 
-I also uploaded the json collection I used in Postman for testing the Http requests and the database DDL for creating the schema and table.
+I also uploaded the json collection I used in Postman for testing the Http requests
 
 ## Conclusion
 
