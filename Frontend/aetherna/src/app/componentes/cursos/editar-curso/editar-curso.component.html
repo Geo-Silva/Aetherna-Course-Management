@@ -1,0 +1,96 @@
+<section class="container editar-cursos ff-inter">
+  <header class="header">
+    <h2>Edite este <br>curso</h2>
+  </header>
+  <form>
+    <label for="nome">Nome</label>
+    <input
+    type="textarea"
+    class="input"
+    id="nome"
+    name="nome"
+    placeholder="Digite o nome do curso"
+    [(ngModel)]="curso.nome">
+    <label for="descricao">Descrição</label>
+    <input
+    type="text"
+    class="input"
+    id="descricao"
+    name="descricao"
+    placeholder="Digite a descrição do curso"
+    [(ngModel)]="curso.descricao">
+    <label for="modelo">Selecione a moldura do curso:</label>
+    <div class="container-radio">
+      <div class="radio-modelo">
+        <label for="modelo1">
+          <input
+          type="radio"
+          id="modelo1"
+          value="modelo1"
+          name="modelo-card"
+          [(ngModel)]="curso.modelo">
+
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 1</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo-1 ff-roboto-mono">
+          <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
+          <p class="nome">{{ curso.nome }}</p>
+          <p class="descricao"><b>{{ curso.descricao }}</b></p>
+        </div>
+      </div>
+      <!---Modelo 2-->
+      <div class="radio-modelo">
+        <label for="modelo2">
+          <input
+          type="radio"
+          id="modelo2"
+          value="modelo2"
+          name="modelo-card"
+          [(ngModel)]="curso.modelo">
+
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 2</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo-2 ff-roboto-mono">
+          <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azul-claro">
+          <p class="nome">{{ curso.nome }}</p>
+          <p class="descricao"><b>{{ curso.descricao }}</b></p>
+        </div>
+      </div>
+      <!---Modelo 3-->
+      <div class="radio-modelo">
+        <label for="modelo3">
+          <input
+          type="radio"
+          id="modelo3"
+          value="modelo3"
+          name="modelo-card"
+          [(ngModel)]="curso.modelo">
+
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 3</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo-3 ff-roboto-mono">
+          <img src="/assets/imagens/modelo3.png" alt="Aspas verdes">
+          <p class="nome">{{ curso.nome }}</p>
+          <p class="descricao"><b>{{ curso.descricao }}</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="acoes">
+      <button (click)="editarCurso()" class="botao" type="submit">Salvar</button>
+      <button (click)="cancel()" class="botao">Cancelar</button>
+    </div>
+  </form>
+</section>
+

@@ -1,0 +1,13 @@
+<div class="curso {{ curso.modelo }} ff-roboto-mono" [ngClass]="larguraCurso">
+  <img src="/assets/imagens/{{ curso.modelo }}.png" alt="Aspas Coloridas">
+  <p class="nome">{{ curso.nome }}</p>
+  <p class="descricao"><b>{{ curso.descricao }}</b></p>
+  <div class="acoes">
+    <button class="botao-editar">
+      <img src="/assets/imagens/icone-editar.png" routerLink="/cursos/editarCurso/{{ curso.id }}" alt="Icone de Edicao">
+    </button>
+    <button class="botao-excluir" routerLink="/cursos/excluirCurso/{{ curso.id }}">
+      <img src="/assets/imagens/icone-excluir.png" alt="Icone de Excluir">
+    </button>
+  </div>
+</div>

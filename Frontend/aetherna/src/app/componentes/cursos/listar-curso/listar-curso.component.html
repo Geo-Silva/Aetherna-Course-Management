@@ -1,0 +1,16 @@
+<section class="container">
+  <header class="header d-flex">
+    <h2 class="ff-inter">Cursos Disponíveis</h2>
+    <button routerLink="/criarCurso" class="botao">Adicionar Curso</button>
+  </header>
+  <div class="mural" *ngIf="listaCursos.length > 0, else semCursos">
+    <div *ngFor="let curso of listaCursos">
+      <app-curso [curso]="curso"></app-curso>
+    </div>
+  </div>
+</section>
+<ng-template #semCursos>
+  <div class="ff-inter sem-cursos">
+    <p>Ainda não há cursos cadastrados!</p>
+  </div>
+</ng-template>
